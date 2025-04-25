@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetTheHideOutV2.0 - Malware Analysis Dashboard</title>
+    <link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1336092042958475318/1365117927153733753/hideout-logo.png?ex=680c24a4&is=680ad324&hm=3a31072b5349a1b7ab4be512195b1a78684c7058b4bf96dcf02d5dcc385c7118&=&format=webp&quality=lossless&width=823&height=823">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>GetTheHideOutV2.0</h1>
+            <nav>
+                <a href="index.html" class="active">Dashboard</a>
+                <a href="analysis.html">Analysis</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Analysis Grid -->
+            <div class="analysis-grid">
+                <!-- File Upload -->
+                <div class="card">
+                    <h2>Upload Malware Sample</h2>
+                    <div class="upload-area" id="dropZone">
+                        <i class="fas fa-upload"></i>
+                        <p>Drag and drop an .exe file here, or click to select</p>
+                        <input type="file" id="fileInput" accept=".exe" hidden>
+                    </div>
+                </div>
+
+                <!-- Analysis Results -->
+                <div class="card">
+                    <h2>Analysis Results</h2>
+                    <div class="results">
+                        <div class="result-item">
+                            <i class="fas fa-exclamation-triangle warning"></i>
+                            <span>No file analyzed yet</span>
+                        </div>
+                        <div class="result-item">
+                            <i class="fas fa-check-circle success"></i>
+                            <span>Ready to analyze</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Analysis -->
+            <div class="analysis-details">
+                <!-- Webhooks Section -->
+                <div class="card">
+                    <h2><i class="fas fa-link"></i> Webhooks Found</h2>
+                    <div id="webhooksList" class="detail-list">
+                        <p class="empty-message">No webhooks detected yet</p>
+                    </div>
+                </div>
+
+                <!-- C2 Servers Section -->
+                <div class="card">
+                    <h2><i class="fas fa-globe"></i> C2 Servers</h2>
+                    <div id="c2List" class="detail-list">
+                        <p class="empty-message">No C2 connections detected yet</p>
+                    </div>
+                </div>
+
+                <!-- Suspicious Strings Section -->
+                <div class="card">
+                    <h2><i class="fas fa-exclamation-triangle"></i> Suspicious Strings</h2>
+                    <div id="stringsList" class="detail-list">
+                        <p class="empty-message">No suspicious strings detected yet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 GetTheHideOutV2.0 - All rights reserved to Long</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

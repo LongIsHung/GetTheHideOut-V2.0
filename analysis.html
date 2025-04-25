@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis - GetTheHideOutV2.0</title>
+    <link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1336092042958475318/1365117927153733753/hideout-logo.png?ex=680c24a4&is=680ad324&hm=3a31072b5349a1b7ab4be512195b1a78684c7058b4bf96dcf02d5dcc385c7118&=&format=webp&quality=lossless&width=823&height=823">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>GetTheHideOutV2.0</h1>
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <a href="analysis.html" class="active">Analysis</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="analysis-comparison">
+                <h2><i class="fas fa-chart-bar"></i> Analysis Comparison</h2>
+                
+                <!-- File Selection -->
+                <div class="file-selection-grid">
+                    <!-- File 1 -->
+                    <div class="card">
+                        <h3>File 1</h3>
+                        <div class="upload-area" id="dropZone1">
+                            <i class="fas fa-upload"></i>
+                            <p>Drag and drop an .exe file here, or click to select</p>
+                            <input type="file" id="fileInput1" accept=".exe" hidden>
+                        </div>
+                    </div>
+
+                    <!-- File 2 -->
+                    <div class="card">
+                        <h3>File 2</h3>
+                        <div class="upload-area" id="dropZone2">
+                            <i class="fas fa-upload"></i>
+                            <p>Drag and drop an .exe file here, or click to select</p>
+                            <input type="file" id="fileInput2" accept=".exe" hidden>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Comparison -->
+                <div class="comparison-grid">
+                    <!-- File 1 Results -->
+                    <div class="comparison-column">
+                        <div class="card">
+                            <h3>File 1 Analysis</h3>
+                            <div class="results" id="results1">
+                                <div class="result-item">
+                                    <i class="fas fa-exclamation-triangle warning"></i>
+                                    <span>No file analyzed yet</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Webhooks -->
+                        <div class="card">
+                            <h3><i class="fas fa-link"></i> Webhooks</h3>
+                            <div id="webhooksList1" class="detail-list">
+                                <p class="empty-message">No webhooks detected yet</p>
+                            </div>
+                        </div>
+
+                        <!-- C2 Servers -->
+                        <div class="card">
+                            <h3><i class="fas fa-globe"></i> C2 Servers</h3>
+                            <div id="c2List1" class="detail-list">
+                                <p class="empty-message">No C2 connections detected yet</p>
+                            </div>
+                        </div>
+
+                        <!-- Suspicious Strings -->
+                        <div class="card">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Suspicious Strings</h3>
+                            <div id="stringsList1" class="detail-list">
+                                <p class="empty-message">No suspicious strings detected yet</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- File 2 Results -->
+                    <div class="comparison-column">
+                        <div class="card">
+                            <h3>File 2 Analysis</h3>
+                            <div class="results" id="results2">
+                                <div class="result-item">
+                                    <i class="fas fa-exclamation-triangle warning"></i>
+                                    <span>No file analyzed yet</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Webhooks -->
+                        <div class="card">
+                            <h3><i class="fas fa-link"></i> Webhooks</h3>
+                            <div id="webhooksList2" class="detail-list">
+                                <p class="empty-message">No webhooks detected yet</p>
+                            </div>
+                        </div>
+
+                        <!-- C2 Servers -->
+                        <div class="card">
+                            <h3><i class="fas fa-globe"></i> C2 Servers</h3>
+                            <div id="c2List2" class="detail-list">
+                                <p class="empty-message">No C2 connections detected yet</p>
+                            </div>
+                        </div>
+
+                        <!-- Suspicious Strings -->
+                        <div class="card">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Suspicious Strings</h3>
+                            <div id="stringsList2" class="detail-list">
+                                <p class="empty-message">No suspicious strings detected yet</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 GetTheHideOutV2.0 - All rights reserved to Long</p>
+        </div>
+    </footer>
+
+    <script src="analysis.js"></script>
+</body>
+</html> 
